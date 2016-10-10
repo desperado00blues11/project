@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>.10使用带有定时器的函数闭包</title>
+    <script>
+        //问题：想要提供一个带有定时器的函数，但是想要直接把该函数添加到定时器方法调用中
+
+        //使用一个匿名函数作为setInterval或satTimeout方法调用的第一个参数
+
+        window.onload=function(){
+            var x=10;
+            var intervalid=setInterval(function(){
+                x+=5;
+                var left=x+'px';
+                document.getElementById('redbox').style.width=left
+            },100);
+        }
+
+    </script>
+</head>
+<body>
+<div id="redbox" style="width: 50px;height: 100px;background-color: #003eff"></div>
+
+</body>
+</html>

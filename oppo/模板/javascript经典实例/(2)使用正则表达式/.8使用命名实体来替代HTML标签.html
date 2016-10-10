@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>.8使用命名实体来替代HTML标签</title>
+    <script>
+        /*问题：把实例标记粘贴到web页面中，并且转义该标签，*/
+
+        //使用正则表达式把尖括号（<>）转换为命名实体：&lt;和&gt;.
+        var pieceofhtml='<p>this is a <span>paragrapg</span></p>';
+        pieceofhtml=pieceofhtml.replace(/</g,'<');
+        pieceofhtml=pieceofhtml.replace(/>/g,'>');
+        alert(pieceofhtml);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

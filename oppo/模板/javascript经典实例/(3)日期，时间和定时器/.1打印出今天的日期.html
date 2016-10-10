@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>.3打印出今天的日期</title>
+    <script>
+        //问题：想要把当前日期和时间打印到一个web页面上。
+
+        //创建一个新的Date对象，没有任何参数，并且将其输出到web页面上
+        window.onload=function(){
+            var dtElem=document.getElementById('date');
+            var dt=new Date();
+            dtElem.innerHTML='<p>'+dt+'</p>';
+        }
+    </script>
+</head>
+<body>
+<div id="date">
+
+</div>
+
+</body>
+</html>

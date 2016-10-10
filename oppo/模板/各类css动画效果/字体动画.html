@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        html{
+            font-family: 微软雅黑;
+        }
+        h1{
+            line-height: 80px;
+            text-align: center;
+
+        }
+        h1:hover{
+            animation: myfirst 1.5s;
+
+        }
+        @keyframes myfirst {
+            40%{transform: scale(1.4,0.75)}
+            53%{transform: scale(0.8,1.2)}
+            66%{transform: scale(1.2,0.85)}
+            76%{transform: scale(0.9,1.13)}
+            84%{transform: scale(1.1,0.9)}
+            90%{transform: scale(0.95,1.08)}
+            94%{transform: scale(1.07,0.95)}
+            97%{transform: scale(0.98,1.05)}
+            100%{transform: scale(1,1)}
+        }
+        h2{
+            line-height: 80px;
+            text-align: center;
+
+        }
+        h2:hover{
+            animation: myfirst2 1.5s;
+
+        }
+        @keyframes myfirst2 {
+            40%{transform:translate(60px,0)}
+            53%{transform: translate(-55px,0)}
+            66%{transform: translate(48px,0)}
+            76%{transform: translate(-37px,0)}
+            84%{transform: translate(27px,0)}
+            90%{transform: translate(-18px,0)}
+            94%{transform: translate(8px,0)}
+            97%{transform: translate(-5px,0)}
+            100%{transform: translate(0,0)}
+        }
+        h3{
+            line-height: 80px;
+            text-align: center;
+            transform-origin:50% 0%;
+
+        }
+        h3:hover{
+            animation: myfirst3 1.5s;
+
+        }
+        @keyframes myfirst3 {
+            40%{transform:rotate(10deg)}
+            53%{transform:rotate(-10deg)}
+            66%{transform:rotate(7deg)}
+            76%{transform:rotate(-7deg)}
+            84%{transform:rotate(5deg)}
+            90%{transform:rotate(-5deg)}
+            94%{transform:rotate(3deg)}
+            97%{transform:rotate(-3deg)}
+            100%{transform:rotate(0deg)}
+        }
+    </style>
+</head>
+<body>
+<h1>hello</h1>
+<h2>hello</h2>
+<h3>hello</h3>
+
+</body>
+</html>

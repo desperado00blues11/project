@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>.7使用正则表达式来去除空白</title>
+    <script>
+        /*问题：再通过一个ajax调用把一个字符串发送给服务器之前，我们想要去除字符串开始处和结尾处的空白*/
+
+        var teststring=' this is the string ';
+        //去除开头处的空白
+        teststring=teststring.replace(/^\s+/,'');
+        //去除结尾处空白
+        teststring=teststring.replace(/\s+$/,'');
+        alert(teststring);
+
+
+        //从ECMAscript5开始，String对象有了trim方方法
+        var testString='  this is the string ';
+        testString=testString.trim();//空白去除了
+        alert(testString);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

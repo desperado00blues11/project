@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>.6检查一个存在的，非空的字符串</title>
+</head>
+<script>
+    /*问题：想要检查一个已经定义了变量，是一个字符串，并且它不为空。*/
+
+    /*使用typeof运算符，通用的valueof方法（这些都是js对象共享的）以及stringlength属性来创建一个条件测试，
+    以确保一个变量是存在的，是一个字符串，并且不为空：*/
+
+    /*如果变量存在，是一个字符串，并且其长度大于0，结果为真*/
+    var string='hello'
+    if(((typeof string !='undefind')&&(typeof string.valueOf()=='string'))&&(string.length>0)){
+        alert('true')
+    }
+
+</script>
+<body>
+
+</body>
+</html>

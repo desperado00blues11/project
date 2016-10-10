@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>.5从字符串中提取子字符串</title>
+    <script>
+        /*问题：提取一个字符串中以：开始以.结束的内容。*/
+
+        /*使用indexOf string方法来找到冒号，然后再次用它来找到冒号后面的第一个句号。
+        有了这两个位置就可以使用String substring来提取子字符串*/
+        var sentence='this is one sentence.this is a sentence with a list of item:apple, banana, orange.';
+        var start=sentence.indexOf(':');
+        var end=sentence.indexOf(".",start+1);
+        var list=sentence.substring(start+1,end);
+        alert(list);
+
+        /*然后，我们还可以使用String.split把列表分割为单个值*/
+        var fruits=list.split(",");
+        alert(fruits);/*(用浏览器打开时没有正常分割)*/
+    </script>
+</head>
+<body>
+
+</body>
+</html>

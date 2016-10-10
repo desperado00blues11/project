@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../toolCase/JQuery/jquery-3.1.0.js"></script><!--jquery框架-->
+    <script type="text/javascript" src="myPop.js" ></script><!--按钮是通过jquery构建-->
+    <link rel="stylesheet" href="myPop.css" /><!--按钮的样式-->
+    <style>
+        div{
+            width:200px ;
+            height: 500px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    这是页头
+</header>
+<div style="background-color: red">
+
+</div>
+
+<div style="background-color:orange ">
+
+</div>
+
+<div style="background-color:yellow ">
+
+</div>
+
+<div style="background-color:green ">
+
+</div>
+
+<div style="background-color:deepskyblue ">
+
+</div>
+
+<div style="background-color: blue">
+
+</div>
+
+<div style="background-color: purple">
+
+</div>
+
+<div style="background-color:gray ">
+
+</div>
+
+<div style="background-color:black ">
+
+</div>
+
+<div style="background-color:#f4c63f">
+
+</div>
+
+</body>
+<script>/*按钮出现和消失的条件*/
+    var $topBtn = lx_pop.createTopBtn();
+    $topBtn.css("display", "none").appendTo("body");
+    var isTopBtnShow = false;
+    window.onscroll = function() {
+        var t = document.documentElement.scrollTop || document.body.scrollTop;
+//				console.log(t);
+        if (t >= 1000 ) {
+            $topBtn.css("display", "block");
+            isTopBtnShow = true;
+        } else{
+            $topBtn.css("display", "none");
+            isTopBtnShow = false;
+        }
+    }
+</script>
+</html>

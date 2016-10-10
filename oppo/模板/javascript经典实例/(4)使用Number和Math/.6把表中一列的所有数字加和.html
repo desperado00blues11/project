@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>.6把表中一列的所有数字加和</title>
+    <script>
+        //问题：遍历表中一列的所有值，将其转换为数字，然后加和
+       var sum=0;
+        var cells=document.querySelectorAll('td:nth-of-type(2)');
+
+        for(var i=0;i<cells.length;i++){
+            sum+=parseFloat(cells[i].firstChild.data);
+        }
+
+
+    </script>
+</head>
+<body>
+
+
+</body>
+</html>

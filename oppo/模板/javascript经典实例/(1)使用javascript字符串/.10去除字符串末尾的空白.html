@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>.10去除字符串末尾的空白</title>
+    <script>
+        window.onload=function(){
+            var txtbox=document.getElementById('test');
+            var lines=txtbox.value.split(' ');
+            var resultstring='';
+
+            for(var i=0; i<lines.length;i++){
+                var strng=lines[i].trim();
+                resultstring+=strng+'';
+            }
+            alert(resultstring);
+        }
+
+    </script>
+</head>
+<body>
+<textarea id="test">dasad dsa dsa dsa dsa das d asd asda aa</textarea>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>.5使用新字符串替换所有匹配的子字符串</title>
+    <script>
+        /*问题：想用一个新的子字符串替换所有匹配的子字符串*/
+
+        //使用String对象的replace方法和一个正则表达式
+        var searchstring='now is the time,this is the time';
+        var re=/t\w{2}e/g;
+        var replscement=searchstring.replace(re,'place');
+        alert(replscement);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

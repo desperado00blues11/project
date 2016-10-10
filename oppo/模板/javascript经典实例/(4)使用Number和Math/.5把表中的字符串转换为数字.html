@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>.5把表中的字符串转换为数字</title>
+    <script>
+        //问题：想要访问一个HTML表格中的值，并将其转换为数字以便处理
+
+        //使用文档对象模型（ Document Object Model,DOM）API来访问数字，并且使用全局函数parseInt把字符串转换为数字值
+        var rows=document.getElementById('table1').children[0].rows;
+        var numArray=new Array();
+
+        for(var i=0;i<rows.length;i++){
+            numArray[numArray.length]=parseInt(rows[i],cells[1].firstChild.data);
+        }
+
+    </script>
+</head>
+<body>
+
+
+</body>
+</html>

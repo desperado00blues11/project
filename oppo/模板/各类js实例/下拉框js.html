@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .btn{
+            width: 50px;
+            height: 30px;
+            background-color: #007aff;
+        }
+        .block{
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            display: none;
+        }
+    </style>
+    <script>
+        window.onload=function() {
+            var btn=document.getElementById('btn');
+            var block=document.getElementById('block');
+            btn.onmouseover=function(){
+                block.style.display='block';
+                block.onmouseover=function(){
+                    block.style.display='block';
+                }
+                block.onmouseout=function(){
+                    block.style.display='none';
+                }
+            }
+            btn.onmouseout=function(){
+                block.style.display='none';
+            }
+        }
+
+    </script>
+</head>
+<body>
+<div class="btn" id="btn"></div>
+<div class="block" id="block"></div>
+
+</body>
+</html>

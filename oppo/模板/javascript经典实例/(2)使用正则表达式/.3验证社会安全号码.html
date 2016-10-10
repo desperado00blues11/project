@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>.3验证社会安全号码</title>
+    <script>
+        /*问题：要验证一个文本字符串是否是一个有效的美国社会安全号码（在美国，这是收税者用来找到我们的身份标识）*/
+
+        //使用String match 方法和一个正则表达式来验证
+        window.onload=function(){
+            var btn=document.getElementById('btn');
+            btn.onclick=function(){
+                var ssn=document.getElementById('pattern').value;
+                var pattern=/^\d{3}-\d{2}-\d{4}$/;
+                if(ssn.match(pattern)){
+                    alert('ok');
+                }else{
+                    alert('not ok');
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+<input type="text" id="pattern">
+<button id="btn"> ok </button>
+
+</body>
+</html>

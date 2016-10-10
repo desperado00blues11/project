@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>.11左补充或右补充一个字符串</title>
+    <script>
+        /*问题：你需要创建一个字符串，使用给定的字符来补充其左边或右边。*/
+    </script>
+</head>
+<body>
+<div id="result">
+</div>
+<script>
+     var preflinelength=20;
+    var oldstr='this is a string';
+     var diff=preflinelength-oldstr.length;
+    var filler='hahahaha';
+    for(var i=0;i<diff;i++){
+        oldstr=oldstr+filler;
+    }
+    document.getElementById('result').innerHTML=oldstr;
+</script>
+
+</body>
+</html>

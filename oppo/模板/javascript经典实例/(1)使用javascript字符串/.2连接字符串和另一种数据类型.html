@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>.2连接字符和另一种数据类型</title>
+    <script>
+        /*字符串和数字*/
+        var numValue=23.45;
+        var total='the number is'+numValue;
+        document.write(total+'<br/>');
+
+        /*把一个布尔值加到一个字符串*/
+        var burValue=true;
+        var str='the value is '+burValue;
+        document.write(str+'<br/>');
+
+        /*连接一个string对象和一个字符串直接量，最终的字符串是一个直接量而不是string对象*/
+        var strObject=new String('the value is ');
+        var string='a string';
+        var strngValue=strObject+string;
+        document.write(strngValue);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>.2打印出UTC日期和时间</title>
+    <script>
+        //问题：想要打印出当前UTC（世界时）的日期和时间，而不是本地时间
+        window.onload=function(){
+            var dateelement=document.getElementById('date');
+            var today=new Date();
+            var utcDate=today.toUTCString();
+            dateelement.innerHTML='<p>local datetime:'+today+'UTC datetime:'+utcDate+'</p>'
+        }
+    </script>
+</head>
+<body>
+<div id="date"></div>
+
+</body>
+</html>

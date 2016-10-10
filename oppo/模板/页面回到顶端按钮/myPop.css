@@ -1,0 +1,30 @@
+
+/*----回到顶部按钮 start----*/
+
+.top-btn {
+	position: fixed;
+	bottom: 280px;
+	right: 10px;
+	width: 43px;
+	height: 43px;
+}
+
+.top-btn a {
+	box-sizing: border-box;
+	display: block;
+	height: 100%;
+	border-radius: 50%;
+	background-color: #06c1ae;
+	color: white;
+	font-size: 20px;
+	text-align: center;
+	line-height: 20px;
+	padding: 13px 10px 0;
+}
+
+.top-btn .text-icon {
+	display: block;
+	border-top: 2px solid white;
+	transform: scaleY(1.3);
+}
+/*----回到顶部按钮 end----*/

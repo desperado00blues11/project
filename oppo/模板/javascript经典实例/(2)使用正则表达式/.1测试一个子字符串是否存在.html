@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>.1测试一个子字符串是否存在</title>
+    <script>
+        /*问题：想要测试一个字符串中是否包含另一个字符串*/
+
+        var cookbookString=new  Array();
+        cookbookString[0]="joe's Cooking Book";
+        cookbookString[1]="sam's Cookbook";
+        cookbookString[2]="Javascript CookBook";
+        cookbookString[3]="javascript BookCook";
+        cookbookString[4]="javascript bbcc";
+
+        //搜索模式
+        var pattern=/Cook.*Book/;
+        for(var i=0;i<cookbookString.length;i++){
+            alert(cookbookString[i]+" "+pattern.test(cookbookString[i]));
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

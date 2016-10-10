@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>.4在字符串中查找字符串</title>
+    <script>
+        /*问题：想要知道一个子字符串是否存在于字符串中*/
+
+        /*使用string对象内建的indexOf方法来查找子字符串的位置*/
+        var textValue='this is the cookbook test string';
+        var subsValue='cookbook';
+        var ivalue=textValue.indexOf(subsValue);/*返回值为子字符出现的第一个位置角标，例如在这里是12，如果没有子字符串就返回-1*/
+        if(ivalue!=-1){
+            alert('有此字符串')
+        }else{
+            alert('没有此字符串')
+        }
+
+        /*indexOf接受两个参数，子字符串和开始搜索的位置，后者可以选择不用。*/
+        var textValue2='this apple is my apple!'
+        var ivalue2=textValue2.indexOf('apple',10);
+        alert(ivalue2)/*显示的是17，这个是第二个子字符串的位置*/
+
+        /*lastIndexOf可从右向左来查找，它返回在字符串中一个子字符串最后出现的索引位置。同样有两个参数。*/
+        var textValue3='this apple is my apple!'
+        var ivalue3=textValue3.lastIndexOf('apple');
+        alert(ivalue3)
+    </script>
+</head>
+<body>
+
+</body>
+</html>

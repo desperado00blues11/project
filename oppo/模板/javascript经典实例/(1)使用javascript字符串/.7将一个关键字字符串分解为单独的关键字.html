@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>.7将一个关键字字符串分解为单独的关键字</title>
+    <script>
+        /*问题：有一个带有关键字的字符串，关键字由逗号隔开。你要将该字符串分解为单个关键字的一个数组，然后使用一个关键字标签
+        来打印出关键字*/
+
+        window.onload=function(){
+            //获取关键字列表
+            var keywordlist=prompt('enter keywords,separated by commas','');
+            var arraylist=keywordlist.split(',');
+            //构建最终html
+            var resultstring='';
+            for(var i= 0;i<arraylist.length;i++){
+                resultstring+='keyword:'+arraylist[i]+'<br/>';
+            }
+            //打印到页面
+            var blk=document.getElementById('result');
+            blk.innerHTML=resultstring;
+        }
+    </script>
+</head>
+<body>
+<div id="result">
+
+</div>
+</body>
+</html>

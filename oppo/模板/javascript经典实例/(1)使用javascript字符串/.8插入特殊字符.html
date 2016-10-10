@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>.8插入特殊字符</title>
+    <script>
+        /*问题：想要向字符串中插入一个特殊字符，例如一个换行。*/
+        window.onload=function(){
+            /*使用转义符*/
+            var resultstring='<p>this page \u00a9 shelley powers </p>'
+            //打印到页面
+            var blk=document.getElementById('result');
+            blk.innerHTML=resultstring;
+        }
+    </script>
+</head>
+<body>
+<div id="result">
+
+</div>
+</body>
+</html>

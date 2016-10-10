@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>定时器</title>
+    <script src="../toolCase/JQuery/jquery-3.1.0.js"></script>
+    <style>
+       /* .mindianqianggou{
+            position: absolute;
+            top: 75px;
+            right: 1%;
+            display: inline-block;
+            width: 33%;
+            height: 75px;
+            border-left: 1px solid #BEBEBE;
+            /!*background-color: #F1C40F;*!/
+        }
+        .mindianqianggou-wenzi{
+            display: block;
+            width: 85px;
+            height: 35px;
+            margin:0 auto;
+            padding-top: 5px;
+        }*/
+        .time{
+            display: block;
+            width: 100px;
+            height: 30px;
+            padding-top: 5px;
+            margin: 0 auto;
+        }
+        .hms{
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background-color: #404040;
+            border-radius: 5px;
+            line-height: 20px;
+            text-align: center;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+<div class="mindianqianggou">
+    <div class="mindianqianggou-wenzi">
+        <strong>名店抢购</strong><br/>
+        <small>距离结束</small>
+    </div>
+    <div class="time">
+        <span class="hms"></span>:
+        <span class="hms"></span>:
+        <span class="hms"></span>
+    </div>
+</div>
+
+
+<script>
+    //	名店抢购结束时间
+    var finishTime = new Date("2016-9-6 21:00:00");
+    /**
+     * 设置抢购时间倒计时
+     * 根据抢购结束时间计算
+     */
+    function qianggoushijian() {
+        var now = new Date();
+        var secends = (finishTime - now) / 1000;
+        var hours = parseInt(secends / (3600));
+        hours = timePanelTool(hours);
+        var minutes = parseInt(secends % (3600) / (60));
+        minutes = timePanelTool(minutes);
+        var seconds = parseInt(Math.round(secends % (3600) % (60)));
+        seconds = timePanelTool(seconds);
+        $(".time").children(":eq(0)").text(hours).next()
+                .text(minutes).next()
+                .text(seconds);
+    }
+
+    function timePanelTool(data) {
+        var t = data.toString();
+        return t.length == 1 ? "0" + t : t;
+    }
+
+    setInterval(qianggoushijian, 1000);
+</script>
+
+</body>
+</html>

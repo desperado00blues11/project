@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>.4随机产生颜色</title>
+    <script>
+        //使用Math对象来随机地产生每个RGB值
+        window.onload=function(){
+            function randomVal(val){
+                return Math.floor(Math.random()*(val+1));
+            }
+            function randomColor(){
+                var block=document.getElementById('block');
+                var color= 'rgb('+randomVal(255)+','+randomVal(255)+','+randomVal(255)+')';
+                block.style.backgroundColor=color;
+            }
+            randomColor()
+        }
+    </script>
+</head>
+<body>
+<div id="block" style="width: 100px;height: 100px;"></div>
+
+</body>
+</html>

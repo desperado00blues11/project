@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .Q{
+            width: 80px;
+            height: 80px;
+            border-radius: 40px;
+            background-color:  #F45551;
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: white;
+            line-height: 80px;
+            text-align: center;
+            animation:myfirst 4s;
+            animation-iteration-count:infinite;/*动画播放次数 为无数次*/
+
+
+        }
+        @keyframes myfirst {
+            0%{
+                top: 0;
+                left:0;
+                background-color: #F45551;
+                width: 80px;
+                height: 80px;
+                border-radius: 40px;
+                transform:rotate(0deg);
+            }
+            50%{
+                top: 0;
+                left: 500px;
+                background-color: #F88E8B;
+                width: 90px;
+                height: 90px;
+                border-radius: 45px;
+                transform:rotate(360deg);
+            }
+            100%{
+                top: 0;
+                left: 0px;
+                background-color: #F45551;
+                width: 80px;
+                height: 80px;
+                border-radius: 40px;
+                transform:rotate(0deg);
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="Q">hello</div>
+
+</body>
+</html>

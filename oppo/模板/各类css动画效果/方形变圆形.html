@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .div1{
+            width: 150px;
+            height: 150px;
+            background-color: #F88E8B;
+            transition: width 1.5s,height 1.5s,transform 1.5s;
+            /*transition-delay: 2s;*/   /*延时*/
+            border-radius: 10px; /*圆角*/
+            text-align: center;
+            line-height: 150px;
+            animation:myfirst2 1s;
+        }
+        .div1:hover{
+            animation:myfirst 1s;
+            width: 230px;
+            height: 230px;
+            transform:rotate(360deg);
+            background-color: #E67E22;;
+            border-radius:120px;
+            /*line-height: 300px;*/
+        }
+        @keyframes myfirst {
+        0% {background:#F88E8B;border-radius: 10px }
+        50% {background:#F45551;}
+        100% {background-color: #E67E22; border-radius: 120px}
+        }
+        @keyframes myfirst2 {
+            0% {
+                background: #E67E22;
+                border-radius: 120px;
+            }
+            50% {
+                background: #F45551;
+            }
+            100% {
+                background-color: #F88E8B;
+                border-radius: 10px;
+
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="div1">
+    hello
+</div>
+</body>
+</html>

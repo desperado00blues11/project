@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>.3打印出一个iso8601格式日期</title>
+    <script>
+        window.onload=function(){
+            var dt=new Date();
+            //获取月份，并增加1
+            var mnth =dt.getUTCMonth();
+            mnth++;
+
+            var day=dt.getUTCDate();
+            if (day<10){
+                day='0'+day;
+            }
+
+            var yr=dt.getUTCFullYear();
+            var hrs=dt.getUTCHours();
+            if(hrs<10){
+                hrs="0"+hrs;
+            }
+            var min=dt.getUTCMinutes();
+            if (min<10){
+                min='0'+min;
+            }
+            var secs=dt.getUTCSeconds();
+            if(secs<10){
+                secs='0'+secs;
+            }
+            var newdate=yr+'-'+mnth+'-'+day+'T'+hrs+':'+min+':'+secs+'Z'
+            document.write(newdate);
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

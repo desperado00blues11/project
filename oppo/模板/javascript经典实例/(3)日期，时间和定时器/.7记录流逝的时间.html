@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>.7记录流逝的时间</title>
+
+</head>
+<body>
+<div id="date" style="background-color: #005aff ;color: #FFFFFF"> btn </div>
+<script>
+    //问题：想要记录两个事件之间流逝的时间。
+
+    //在第一个事件发生的时候，创建一个Date对象，当第二个事件发生的时候，创建一个新的Date对象，并且从第二个对象中减去第一个
+    //之间的差以毫秒表示，要转换为秒，除以1000
+
+
+    var firstDate;
+    window.onload=startTimer;
+
+    function startTimer(){
+        firstDate=new Date();
+        document.getElementById('date').onclick=doEvent;
+    }
+    function doEvent(){
+        var secondDate=new Date();
+        alert((secondDate-firstDate)/1000);
+    }
+
+</script>
+
+</body>
+</html>

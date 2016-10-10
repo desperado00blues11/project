@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>.9创建重复性定时器</title>
+    <script>
+        //问题：需要在固定的时间间隔运行同样的函数次数
+
+        //使用window,setInterval方法来创建一个重复性的定时器：
+
+        var x=0;
+        setInterval(moveElement,1000);
+
+        function moveElement(){
+            x+=10;
+            var left=x+'px';
+            document.getElementById('redbox').style.width=left;
+        }
+    </script>
+</head>
+<body>
+<div id="redbox" style="width:100px;height:100px;background-color: #005aff"></div>
+
+</body>
+</html>

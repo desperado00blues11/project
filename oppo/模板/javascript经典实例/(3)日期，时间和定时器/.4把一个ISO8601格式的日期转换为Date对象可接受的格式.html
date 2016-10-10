@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>.4把一个ISO8601格式的日期转换为Date对象可接受的格式</title>
+    <script>
+        window.onload=function(){
+            var dtstr="2009-10-15T14:42:51Z";
+
+            dtstr=dtstr.replace(/\D/g,' ');
+            var dtcomps=dtstr.split(' ');
+            //在基于ISO 8601月份和基于0的日期格式之间转换
+            dtcomps[1]--;
+
+            var convdt= new Date(Date.UTC(dtcomps[0],dtcomps[1],dtcomps[2],dtcomps[3],dtcomps[4],dtcomps[5]));
+            document.write(convdt);
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

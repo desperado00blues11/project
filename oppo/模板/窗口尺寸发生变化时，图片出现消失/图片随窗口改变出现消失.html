@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片随窗口尺寸改变而出现消失</title>
+    <script src="../toolCase/JQuery/jquery-3.1.0.js"></script>
+    <!--页首和图片的样式-->
+    <style>
+        @media screen and (max-width: 500px) {
+            body {
+                width: 500px;
+            }
+        }
+        html, body {
+            /*position: relative;*/
+            height: 100%;
+        }
+        body {
+            background: #eee;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color:#000;
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            position: relative;
+            width: 100%;
+            height: 50px;
+            background-color: #2ECC71;
+        }
+        .city{
+            display: inline-block;
+            width: 30px;
+            height: 15px;
+            margin: 16px 5px 16px 15px;
+            float: left;
+            color: white;
+        }
+        .v{
+            display: inline-block;
+            width: 6px;
+            height: 15px;
+            margin: 16px 5px 16px 0px;
+            float: left;
+            color: white;
+        }
+        .sousuo{
+            display: inline-block;
+            position: absolute;
+            right: 60px;
+            left: 60px;
+            height: 23px;
+            margin-top: 14px;
+            background-color: #27AE60;
+            border-radius: 5px;
+        }
+        .wode{
+            display: inline-block;
+            float: right;
+            width: 25px;
+            height: 40px;
+            margin: 8px 15px 0px 15px;
+            font-size: 8px;
+            color: white;
+        }
+        .guanggao{
+            width: 100%;
+            height: 100px;
+            overflow: hidden;
+            display: none;
+        }
+
+        .adv{
+            display:block;
+            width: 640px;
+            height: 100px;
+            margin: 0 auto;
+
+        }
+    </style>
+</head>
+<body>
+<!--页首-->
+<header>
+    <a href="#"><div class="city">深圳</div><div class="v">v</div></a>
+    <a href="#"><div class="sousuo iconfont"><span class="iconfont" style="float: left;margin: 2px 2px;color: white">请改变浏览器窗口宽度，将会有图片出现</span></div></a>
+    <a href="#"><div class="wode"><span class="iconfont" style="margin: 3px;color: white">&#xe602;</span>我的</div></a>
+</header>
+<!--出现，消失的图片-->
+<div class="guanggao">
+    <a href="#"><img class="adv" src="http://p1.meituan.net/mmc/dbc70b32f22415bc55d1523d7141735c18365.jpg.webp"></a>
+</div>
+
+<!--控制图片出现消失-->
+<script>
+    $(window).resize(function(){ /*监听window窗口的尺寸*/
+        var $width=$( this).width(); /*声明窗口的宽度为变量*/
+        if($width<640){
+            $('.guanggao').css('display','block');
+
+        }else{
+            $('.guanggao').css('display','none');
+        }
+    })
+</script>
+</body>
+</html>

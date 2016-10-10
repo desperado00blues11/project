@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>.3创建一个随机数生成器</title>
+    <script>
+        //问题：需要生成0-255之间的一个随机数
+
+        //使用JavaScript Math方法的组合：random产生一个0-1之间的随机值，然后将其乘以256，并且用floor来截断这个数值
+
+        var randomNumber=Math.floor(Math.random()*256);
+        alert(randomNumber);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

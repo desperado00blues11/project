@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>.9处理textarea的单个行</title>
+    <script>
+        /*问题：想要处理textarea框中的单个行*/
+
+        /*使用split方法，结合换行转移序列（\n），把textarea的内容分割到其单独的行中*/
+        window.onload=function(){
+            var txtbox=document.getElementById('inputbox');
+            var lines=txtbox.value.split("\n");
+
+            //生成文本的html版本
+            var resultstring='<p>'
+            for(var i=0;i<lines.length;i++){
+                resultstring+=lines[i]+'<br/>';
+            }
+            resultstring+='</P>';
+
+            //打印到页面
+            var blk=document.getElementById('result');
+            var btn=document.getElementById('btn');
+            btn.onclick= function() {
+                alert(resultstring)
+                blk.innerHTML=resultstring;
+            }
+        }
+
+    </script>
+</head>
+<body>
+<textarea id="inputbox">
+
+</textarea>
+<button id="btn">btn</button>
+<div id="result"></div>
+
+</body>
+</html>

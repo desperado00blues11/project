@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>oppo手机官网</title>
+    <link rel="stylesheet" href="../JQuery/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../JQuery/dist/css/bootstrap-theme.min.css">
+    <script src="../JQuery/jquery-3.1.0.js"></script>
+    <script src="../JQuery/dist/js/bootstrap.min.js"></script>
+    <style>
+        html{
+            font-family: "Myriad Pro", Arial, "FZLanTingHei-R-GBK", 方正兰亭黑, "Microsoft YaHei", 微软雅黑, STHeiti, 华文黑体, SimSun, 宋体, sans-serif;;
+        }
+        .header_top{
+            width: auto;
+            height: 30px;
+            background-color:#009B72;
+        }
+        .header_top_center,.header_bottom{
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 12px 0 12px;
+        }
+        .header_top_btn{
+            padding: 6px 20px 5px 20px;
+            color: #FFFFFF;
+            font-size: 0.8125rem;
+            float: right;
+            border-left: 1px solid #47B488;
+        }
+        .header_bottom{
+            height: 78px;
+            overflow: hidden;
+        }
+        .header_bottom_logo{
+            display: inline-block;
+            width: 400px;
+            height: 30px;
+            margin: 26px 0 20px 0;
+        }
+        .header_bottom_menu{
+            width: 552px;
+            height: 78px;
+            float: right;
+            font-size: 0;
+        }
+        .header_bottom_menu>a{
+            display: inline-block;
+            padding: 29px 20px 29px 20px;
+            color:#7B7B7B;
+            font-size:14px;
+            text-decoration: none;
+        }
+        .header_bottom_menu>a>span{
+            padding: 4px 3px 4px 2px;
+            border-bottom: 2px solid white;
+        }
+        .header_bottom_menu>a:hover span{
+            color: #393939;
+        }
+    </style>
+    <style>
+        .H2{
+            display: table;
+            width: 100%;
+            height: 48px ;
+            padding: 0 12px;
+            background-color: white;
+            opacity: 0.8;
+        }
+        .H2_logo{
+            width: 104px;
+            height: 36px;
+            padding-top: 15px;
+            margin: auto;
+        }
+        .H2_logo>img{
+            display: block;
+            width: 104px;
+            height: 20px;
+        }
+        .H2_manu{
+            display: inline-block;
+            float: left;
+            width: 20px;
+            height: 48px;
+        }
+    </style>
+</head>
+<body>
+<header class="H1">
+    <div class="header_top">
+        <div class="header_top_center">
+            <a href="#"><div class="header_top_btn">global</div></a>
+            <a href="#"><div class="header_top_btn">注册</div></a>
+            <a href="#"><div class="header_top_btn">登陆</div></a>
+        </div>
+    </div>
+    <div class="header_bottom">
+        <div class="header_bottom_logo">
+            <a href="#"><img src="img/logo.png"></a>
+        </div>
+        <div class="header_bottom_menu">
+            <a href="#"><span style="border-bottom:2px solid #2aad6f">首页</span></a>
+            <a href="#"><span>产品</span></a>
+            <a href="#"><span>商城</span></a>
+            <a href="#"><span>体验店</span></a>
+            <a href="#"><span>服务</span></a>
+            <a href="#"><span>ColorOS</span></a>
+            <a href="#"><span>社区</span></a>
+        </div>
+    </div>
+</header>
+<header class="H2">
+    <a href="#" class="H2_manu">
+        <div></div>
+        <div></div>
+        <div></div>
+    </a>
+    <div class="H2_logo">
+        <img src="img/logo.png">
+    </div>
+    <a href="#" class="H2_mine"></a>
+</header>
+
+</body>
+<script>
+    $(window).resize(function(){ /*监听window窗口的尺寸*/
+        var $width=$( this).width(); /*声明窗口的宽度为变量*/
+        if($width<990){
+            $('.H1').css('display','none');
+            $('.H2').css('display','table')
+        }else{
+            $('.H1').css('display','block');
+            $('.H2').css('display','none');
+        }
+    })
+</script>
+</html>

@@ -1,0 +1,23 @@
+(function(){
+     var nowNew=0;
+            var lis=$(".ul li")
+            var setTimer=1200
+            $(".ul li:first").clone().appendTo('.ul')
+            var timer;
+           $("button").click(rightBtn)
+            function rightBtn(){
+                
+               if(!$(".ul").is(":animated")){
+                     if(nowNew<lis.length-1){
+                    nowNew++
+                    $(".ul").animate({"top":nowNew*-30}, 1000)
+                }else{
+                    nowNew=0;
+                    $(".ul").animate({"top":lis.length*-30}, 1000,function(){
+                       $(".ul").css("top",0)
+                   });
+                }
+               }     
+           }
+           timer=setInterval(rightBtn, setTimer)
+})

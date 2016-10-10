@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>堆糖网</title>
+    <style>
+        html,body{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            z-index: 5;
+        }
+        .headercenter,.fenlei, .phone, .phone_photo,body{
+            position: relative;
+        }
+        .xl_block, .erveima{
+            position: absolute;
+        }
+        .logo,.fenlei, .fenlei:hover .xl_block, .sousuo,.phone, .phone>div, .phone_photo, .phone a,.phone i,.phone:hover .erveima, .vline, .zhuce,.td_life
+        {
+            display: inline-block;
+        }
+        .logo, .fenlei,.sousuo, input{
+            float: left;
+        }
+        .fenlei>i, .phone,.phone>div, .vline, .denglu, .zhuce,.td_life{
+            float: right;
+        }
+        .phone a, .denglu, .zhuce,.td_life a{
+            text-align: center;
+        }
+        .phone a,.td_life a{
+            text-decoration: none;
+        }
+
+
+        header{
+            width: 100%;
+            height: 64px;
+            position: fixed;
+            z-index: 6;
+        }
+        .headercenter{
+            z-index: 990;
+            width: 1200px;
+            height: 64px;
+            margin: auto;
+        }
+        .logo{
+            width: 80px;
+            height: 64px;
+            background: url("img/logo.png") no-repeat center;
+        }
+        .fenlei{
+            z-index: 1000;
+            width: 60px;
+            height: 26px;
+            border-radius: 3px;
+            border: 1px solid #E1E1E1;
+            color: #666666;
+            background-color: white;
+            margin: 18px 0 0 22px;
+            padding-left: 8px;
+            line-height: 26px;
+        }
+        .fenlei>i{
+            width: 26px;
+            height: 26px;
+            background: url("img/jiantou.png") no-repeat center;
+            transition: transform 0.3s;
+        }
+        .fenlei:hover i{
+            transform: rotate(180deg)
+        }
+        .fenlei:hover{
+            height: 46px;
+            border-bottom: 0px white;
+        }
+        .xl_block{
+            top: 44px;
+            left: -1px;
+            z-index: 999;
+            display: none;
+            width: 486px;
+            height: 280px;
+            padding: 35px 0 35px 0;
+            border: 1px solid #E1E1E1;
+            background-color: white;
+        }
+        .sousuo{
+            width:364px;
+            height: 30px;
+            margin: 16px 0 0 52px;
+            border: 1px solid #c5c5c5;
+        }
+        input{
+            width: 328px;
+            height: 28px;
+            border: 0;
+            padding: 1px 0 1px 0;
+        }
+        button{
+            width: 36px;
+            height: 29px;
+            margin: 0;
+            padding: 0;
+            border: 0;
+            background: url("img/sousuo.png") no-repeat center white;
+        }
+        .phone{
+            width: 110px;
+            height: 68px;
+            font-size: 0;
+        }
+        .phone>div{
+            width: 81px;
+            height: 54px;
+            padding-top: 14px;
+        }
+        .phone_photo{
+            top: 6px;
+            width: 11px;
+            height: 19px;
+            background: url("img/phone.png");
+        }
+        .phone a{
+            padding-left:6px ;
+            margin-right: 10px;
+            font-size: 12px;
+            line-height: 16px;
+            color: #2b2b2b;
+        }
+        .phone i{
+            width: 10px;
+            height: 10px;
+            background: url("img/jiantou.png")no-repeat center;
+            transition: transform 0.3s;
+        }
+        .phone:hover i{
+            transform: rotate(180deg)
+        }
+        .erveima{
+            display:none;
+            top: 63px;
+            left: -81px;
+            width: 189px;
+            height: 180px;
+            border: 1px solid #E1E1E1;
+        }
+        .vline{
+            width: 1px;
+            height: 24px;
+            margin-top:20px ;
+            background-color: #cee3f2;
+        }
+        .denglu{
+            width: 26px;
+            height: 64px;margin: 0 25px 0 25px;
+            line-height: 64px;
+            font-size: 12px;
+        }
+        .zhuce{
+            width: 52px;
+            height: 28px;
+            margin: 18px 25px 0 25px;
+            background-color: #FF4466;
+            color: white;
+            line-height: 28px;
+            font-size: 12px;
+            border-radius: 5px;
+        }
+        .td_life{
+            width: 100px;
+            height: 64px;
+            margin: 0 25px 0 25px;
+        }
+        .td_life a{
+            font-size: 13px;
+            line-height: 64px;
+            color: #3c3c3c;
+        }
+        .td_life span{
+            padding: 0 3px 2px 3px;
+            background-color: #FF4466;
+            color: white;
+            font-size: 14px;
+            border-radius: 2px;
+            margin-left:4px;
+        }
+        .header_bottom_line{
+            width: 100%;
+            height: 1px;
+            background-color: #D4D5D6;
+        }
+    </style>
+
+    <style>
+        @media screen and (max-width: 1245px) {
+            .headercenter {
+                width: 960px;
+            }
+            .sousuo{
+                width: 208px;
+            }
+            input{
+                width: 172px;
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="headercenter">
+        <!--堆糖logo-->
+        <a href="#" class="logo"></a>
+        <!--分类 按钮-->
+        <div class="fenlei">分类<i></i>
+            <div class="xl_block"><!--分类按钮 下拉框-->
+
+            </div>
+        </div>
+        <!--搜索框-->
+        <div class="sousuo">
+            <input type="text"/>
+            <button></button>
+        </div>
+        <!--最右边 手机版-->
+        <div class="phone">
+            <div><span class="phone_photo"></span>
+                <a href="#">手机版</a>
+                <i></i>
+                <div class="erveima"><!--二维码下拉框-->
+                    <a href=""><img src=""/></a><!--二维码图片-->
+                </div>
+            </div>
+        </div>
+        <div  class="vline"></div><!--分割线-->
+
+        <!--登录按钮-->
+        <div class="denglu">登录</div>
+        <div  class="vline"></div><!--分割线-->
+
+        <!--注册按钮-->
+        <a href="#"><div class="zhuce">注册</div></a>
+        <div  class="vline"></div><!--分割线-->
+
+        <!--堆糖生活家按钮-->
+        <div class="td_life"><a href="">堆糖生活家</a><span>new</span></div>
+        <div  class="vline"></div><!--分割线-->
+
+    </div>
+    <!--华丽的分割线-->
+    <div class="header_bottom_line"></div>
+</header>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>.4找到并突出显示一个模式的所有实例</title>
+    <script>
+        /*问题：想要在一个字符串中找到一个模式的所有实例*/
+
+        /*在一个循环中，使用RepExp exec方法和全局变量（g）*/
+        window.onload=function(){
+            var searchstring='Now is the time and this is the time and that is the time.';
+            var pattern=/t\w*e/g;
+            var matchArray;
+
+            var str='';
+            while((matchArray=pattern.exec(searchstring))!=null){
+                str='at'+matchArray.index+'we found'+matchArray[0]+'<br/>';
+                alert(str);
+            }
+        }
+
+
+    </script>
+</head>
+<body>
+<textarea name="" id="results" cols="30" rows="10"></textarea>
+
+</body>
+</html>

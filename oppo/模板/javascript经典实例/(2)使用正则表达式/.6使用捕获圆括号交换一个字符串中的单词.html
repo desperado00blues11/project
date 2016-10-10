@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>.6使用捕获圆括号交换一个字符串中的单词</title>
+    <script>
+        /*问题：我们可以接受一个带有名称和姓氏的输入字符串，并且交换名称，以便让姓氏先出现*/
+
+        //使用捕获圆括号和一个正则表达式在字符串中找到并且记住两个名字，然后互换他们
+
+        var name='Abe Lincoln';
+        var re=/^(\w+)\s(\w+)$/;
+        var newname=name.replace(re,'$2,$1');
+        alert(newname);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

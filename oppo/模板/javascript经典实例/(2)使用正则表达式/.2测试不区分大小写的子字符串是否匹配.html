@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>.2测试不区分大小写的子字符串是否匹配</title>
+    <script>
+       /* 问题：测试一个字符串是否包含于另一个字符串之中，但是你并不在意两字符串中的大小写*/
+
+        //在创建正则表达式的时候，使用忽略大小写的标志（i）
+
+        var cookbookstring=new Array();
+        cookbookstring[0]="joe's Cooking Book";
+        cookbookstring[1]="Sam's CookBook";
+        cookbookstring[2]="JavaScript CookBook";
+        cookbookstring[3]="JavaScript cookbook";
+
+        //搜索模式
+       var pattern=/Cook.*Book/i;
+        for(var i=0; i<cookbookstring.length;i++){
+            alert(cookbookstring[i]+" "+pattern.test(cookbookstring[i],i));
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

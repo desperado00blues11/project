@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        html{
+        font-family: 微软雅黑;
+        }
+
+       .div1{
+           background-color: #F45551;
+           width: 100%;
+           height: 100px;
+       }
+        .div2{
+            width: 200px;
+            height: 50px;
+            font-size: 3em;
+            font-weight: 700;
+            line-height: 50px;
+            overflow: hidden;/*隐藏溢出 这个属性很重要*/
+            color:#FFFFFF;
+            background-color: #F45551;
+            animation:  head_animate 4s ease-in-out alternate infinite;
+        }
+        @keyframes head_animate {
+            0%{
+                width: 0px;
+            }
+            100%{
+                width: 200px;
+            }
+    </style>
+</head>
+<div class="div1">
+    <div class="div2">
+    hello
+    </div>
+</div>
+
+</body>
+</html>

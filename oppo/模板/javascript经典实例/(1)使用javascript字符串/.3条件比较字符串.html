@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>.3条件比较</title>
+    <script>
+        /*问题：想要比较两个字符串看看它们是否相同*/
+        var atrName=prompt('what is your name?','');   /*prompt():弹出个输入框，让你输入东西*/
+        if (atrName=='jack'){
+            alert('your name is jack');
+        }else{
+            alert('your name isnt jack');
+        }
+
+        /*使用内建的string方法toLowerCase和toUpperCase,把字符去阿奴转换成大或者小写，这样可以避免输入文本时大小写的影响*/
+        var atrName2=prompt('what is your name?','');   /*prompt():弹出个输入框，让你输入东西*/
+        if (atrName2.toUpperCase()=='JACK'){
+            alert('your name is jack');
+        }else{
+            alert('your name isnt jack');
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

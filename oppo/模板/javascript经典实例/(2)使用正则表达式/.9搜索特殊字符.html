@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>.9搜索特殊字符</title>
+    <script>
+        //问题：我们要搜索数字和字母，以及任何非数字或其他字符的内容，但是需要搜索的内容之一是特殊的正则表达式字符自身
+
+        //使用反斜杠转义模式匹配字符
+        var re=/\\d/;
+        var pattern='\\d{4}';
+        var pattern2=pattern.replace(re,'\\D');
+    </script>
+</head>
+<body>
+
+</body>
+</html>

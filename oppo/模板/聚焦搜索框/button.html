@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .rrr{
+            display: inline-block;
+            width: 90px;
+            height: 42px;
+            border: 1px solid #404040;
+            border-radius: 22px;
+            outline: none;
+            padding: 9px 10px 9px 33px;
+            -webkit-appearance: textfield;
+            background:url("../../fdj.png");
+            background-repeat: no-repeat;
+            background-position:12px;
+            background-color: #F5F5F5;
+            transition: background-color 0.5s,border-color 0.5s, width 0.5s,box-shadow 0.5s;
+        }
+        input::-webkit-search-decoration,
+        input::-webkit-search-cancel-button {  display: none; /* remove the search and cancel icon */  }
+        input:-moz-placeholder {
+            color: #999;
+        }
+        input::-webkit-input-placeholder {
+            color: #999;
+        }
+        input[type=search]:focus{
+            background-color: white;
+            border-color: dodgerblue;
+            width: 120px;
+            -webkit-box-shadow: 2px;
+            -moz-box-shadow: 2px;
+            box-shadow: 2px 2px 3px lightskyblue;
+            opacity:0.6;
+        }
+        .rrr2{
+            width: 42px;
+            height: 42px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+
+<input type="search" class="rrr"  placeholder="Search">
+<br/>
+<input type="search" class="rrr rrr2">
+
+</body>
+</html>
